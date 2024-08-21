@@ -1,0 +1,33 @@
+{
+    "name":"ReactJS Chrome Extension",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "ReactJS Chrome Extension",
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
+    "action": {
+        "default_title": "Click Me",
+        "default_popup": "popup.html"
+    },
+    "chrome_url_overrides": {
+        "newtab": "newTab.html"
+    },
+    "permissions": [
+        "tabs",
+        "bookmarks",
+        "storage"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://support.google.com/legal/contact/lr_counternotice?product=websearch","https://*.google.com/*"],
+            "js": ["contentScript.js"]
+        }
+    ],
+    "options_page": "options.html"
+}
