@@ -9,7 +9,7 @@ const Tabs = () => {
     return (
         <div>
             <h1 className="text-3xl text-green-500">Tab Hello World</h1>
-             <ul>
+             <ul className='nav'>
                 <li>
                     <Link to="/">Home</Link>
                 </li>

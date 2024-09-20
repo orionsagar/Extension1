@@ -104,7 +104,7 @@ __webpack_require__.r(__webpack_exports__);
 const Tabs = () => {
     return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null,
         react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", { className: "text-3xl text-green-500" }, "Tab Hello World"),
-        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", null,
+        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", { className: 'nav' },
             react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null,
                 react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, { to: "/" }, "Home")),
             react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null,

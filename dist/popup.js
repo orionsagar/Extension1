@@ -160,11 +160,15 @@ const Popup = () => {
         //    data: formValues
         //  });
         //});
-        chrome.runtime.sendMessage({ action: 'SET_FORM_VALUES', formValues }, (response) => {
-            if (response) {
-                // Handle the response from the background script
-                console.log(response.message);
-            }
+        // chrome.runtime.sendMessage({ action: 'SET_FORM_VALUES', data: formValues }, (response) => {
+        //     if (response) {
+        //       // Handle the response from the background script
+        //       console.log("Popup message: " + response.message);
+        //     }
+        // });
+        console.log("Form submitted11:", formValues);
+        chrome.runtime.sendMessage({ action: 'SET_FORM_VALUES', data: formValues }, (response) => {
+            console.log(response);
         });
     };
     return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", { className: 'h-screen' },

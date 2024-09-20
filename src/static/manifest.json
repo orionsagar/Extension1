@@ -17,15 +17,21 @@
     },
     "permissions": [
         "tabs",
+        "activeTab",
         "bookmarks",
-        "storage"
+        "storage",
+        "scripting"
     ],
     "background": {
       "service_worker": "background.js"
     },
     "content_scripts": [
         {
-            "matches": ["https://support.google.com/legal/contact/lr_counternotice?product=websearch","https://*.google.com/*"],
+            "matches": [
+                "https://*/*",
+                "http://*/*",
+                "https://*.support.google.com/*",
+                "https://*.google.com/*"],
             "js": ["contentScript.js"]
         }
     ],
